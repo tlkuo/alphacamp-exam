@@ -29,14 +29,14 @@
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="147" id="Gi7-5m-K5b">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="147" id="Gi7-5m-K5b" customClass="MovieTableViewCell" customModule="ACMovie" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="147"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gi7-5m-K5b" id="kdU-WF-iE9">
                                             <rect key="frame" x="0.0" y="0.0" width="287" height="146.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tUd-bl-l04">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tUd-bl-l04">
                                                     <rect key="frame" x="20" y="20" width="95.5" height="106.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="tUd-bl-l04" secondAttribute="height" multiplier="1:1" priority="750" id="TgB-aa-1bN"/>
@@ -74,10 +74,17 @@
                                             </variation>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Be9-vS-gc6" kind="show" id="HTl-g4-IfO"/>
+                                            <outlet property="imageView" destination="tUd-bl-l04" id="nmh-n8-C0o"/>
+                                            <outlet property="movieDate" destination="EVV-vp-VNf" id="ATt-Hb-Xdl"/>
+                                            <outlet property="movieImage" destination="tUd-bl-l04" id="HKa-Qz-qpn"/>
+                                            <outlet property="movieName" destination="Mpn-f2-d4u" id="HhC-ny-AUf"/>
+                                            <segue destination="Be9-vS-gc6" kind="show" identifier="ShowMovieDetail" id="HTl-g4-IfO"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="CeG-CG-rnZ"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -90,6 +97,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="本週新片" id="55I-4U-67E"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="movieTable" destination="HhF-uE-2uM" id="olm-ap-u36"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -98,7 +108,7 @@
         <!--電影名稱-->
         <scene sceneID="Alr-mE-hdI">
             <objects>
-                <viewController id="Be9-vS-gc6" sceneMemberID="viewController">
+                <viewController id="Be9-vS-gc6" customClass="MovieDetailViewController" customModule="ACMovie" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kOn-er-FFq"/>
                         <viewControllerLayoutGuide type="bottom" id="JRa-n9-DZg"/>
@@ -107,7 +117,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tCV-vH-2NN">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tCV-vH-2NN">
                                 <rect key="frame" x="60" y="84" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="0wG-qg-xJA"/>
@@ -134,6 +144,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="電影名稱" id="E47-tX-NDn"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="movieDescription" destination="aNo-oi-aEL" id="Y5Y-Mu-I6X"/>
+                        <outlet property="movieImage" destination="tCV-vH-2NN" id="V7z-9H-2Eo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cAu-AR-DCH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
