@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MovieViewController.swift
 //  ACExam
 //
 //  Created by martin on 2016/3/28.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MovieViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

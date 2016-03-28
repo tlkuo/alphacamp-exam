@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+struct Movie {
+    var name: String
+    var image: String
+    var date: String
+    var description: String
+}
