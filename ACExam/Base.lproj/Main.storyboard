@@ -156,7 +156,7 @@
         <!--簽名-->
         <scene sceneID="a9P-GM-ax7">
             <objects>
-                <viewController id="kDJ-7L-pRN" sceneMemberID="viewController">
+                <viewController id="kDJ-7L-pRN" customClass="FansViewController" customModule="ACMovie" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Plx-4s-DcL"/>
                         <viewControllerLayoutGuide type="bottom" id="ioo-QR-Zq5"/>
@@ -173,6 +173,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybD-Nh-JQz">
                                 <rect key="frame" x="200" y="30" width="60" height="30"/>
                                 <state key="normal" title="新增簽名"/>
+                                <connections>
+                                    <action selector="newSign:" destination="kDJ-7L-pRN" eventType="touchUpInside" id="elx-Mo-Tqe"/>
+                                </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="f06-Wk-9DD">
                                 <rect key="frame" x="20" y="70" width="280" height="140"/>
@@ -213,6 +216,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="簽名" id="raX-HF-IlG"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="errorMessageLabel" destination="uGy-R1-uvD" id="qMZ-r4-AON"/>
+                        <outlet property="inputTextField" destination="16D-ll-eFc" id="Zfr-An-twR"/>
+                        <outlet property="inputTextView" destination="f06-Wk-9DD" id="MCx-By-0wB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NR4-5C-2bF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
