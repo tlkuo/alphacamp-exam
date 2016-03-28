@@ -32,6 +32,7 @@
 		5BED57D91CA90727003D73AD /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		5BED57DB1CA90BC9003D73AD /* MovieDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		5BED57DD1CA911DA003D73AD /* FansViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FansViewController.swift; sourceTree = "<group>"; };
+		5BED57DF1CA918F8003D73AD /* ProgrammingExercise.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = ProgrammingExercise.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +49,7 @@
 		5BED57B71CA8F719003D73AD = {
 			isa = PBXGroup;
 			children = (
+				5BED57DF1CA918F8003D73AD /* ProgrammingExercise.playground */,
 				5BED57C21CA8F719003D73AD /* ACMovie */,
 				5BED57C11CA8F719003D73AD /* Products */,
 			);
