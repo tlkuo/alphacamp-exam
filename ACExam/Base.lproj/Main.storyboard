@@ -164,7 +164,52 @@
                     <view key="view" contentMode="scaleToFill" id="ROl-jf-ED1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="16D-ll-eFc">
+                                <rect key="frame" x="20" y="30" width="160" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ybD-Nh-JQz">
+                                <rect key="frame" x="200" y="30" width="60" height="30"/>
+                                <state key="normal" title="新增簽名"/>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="f06-Wk-9DD">
+                                <rect key="frame" x="20" y="70" width="280" height="140"/>
+                                <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="f06-Wk-9DD" secondAttribute="height" multiplier="2:1" id="jha-KC-GDS"/>
+                                </constraints>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="名字不能留白" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGy-R1-uvD">
+                                <rect key="frame" x="30" y="230" width="102" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uGy-R1-uvD" firstAttribute="leading" secondItem="ROl-jf-ED1" secondAttribute="leading" constant="30" id="6kZ-8P-RHU"/>
+                            <constraint firstItem="f06-Wk-9DD" firstAttribute="leading" secondItem="ROl-jf-ED1" secondAttribute="leading" constant="20" id="CdV-Yd-545"/>
+                            <constraint firstItem="16D-ll-eFc" firstAttribute="leading" secondItem="ROl-jf-ED1" secondAttribute="leading" constant="20" id="GB6-Hs-OrK"/>
+                            <constraint firstItem="16D-ll-eFc" firstAttribute="top" secondItem="Plx-4s-DcL" secondAttribute="bottom" constant="10" id="KTC-C6-u9Y"/>
+                            <constraint firstAttribute="trailing" secondItem="f06-Wk-9DD" secondAttribute="trailing" constant="20" id="XAM-P9-Ywl"/>
+                            <constraint firstItem="ybD-Nh-JQz" firstAttribute="leading" secondItem="16D-ll-eFc" secondAttribute="trailing" constant="20" id="Z3K-j8-00X"/>
+                            <constraint firstItem="ybD-Nh-JQz" firstAttribute="centerY" secondItem="16D-ll-eFc" secondAttribute="centerY" id="hlb-tY-CTB"/>
+                            <constraint firstItem="uGy-R1-uvD" firstAttribute="leading" secondItem="f06-Wk-9DD" secondAttribute="leading" id="nIM-qI-fxs"/>
+                            <constraint firstItem="16D-ll-eFc" firstAttribute="width" secondItem="ROl-jf-ED1" secondAttribute="width" multiplier="1:2" id="qb9-Xy-aOt"/>
+                            <constraint firstItem="f06-Wk-9DD" firstAttribute="top" secondItem="ybD-Nh-JQz" secondAttribute="bottom" constant="10" id="xdp-DI-SC4"/>
+                            <constraint firstItem="uGy-R1-uvD" firstAttribute="top" secondItem="f06-Wk-9DD" secondAttribute="bottom" constant="20" id="yDv-ux-bwF"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="nIM-qI-fxs"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="簽名" id="raX-HF-IlG"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
