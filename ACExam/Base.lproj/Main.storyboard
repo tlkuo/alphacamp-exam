@@ -3,12 +3,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--電影-->
+        <!--本週新片-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ACMovie" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="ACMovie" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,14 +18,126 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="147" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HhF-uE-2uM">
+                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="separatorColor" red="0.98431372549999996" green="0.30588235289999999" blue="0.035294117649999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="gUl-X4-uDm">
+                                    <rect key="frame" x="0.0" y="175" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="147" id="Gi7-5m-K5b">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="147"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gi7-5m-K5b" id="kdU-WF-iE9">
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="146.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tUd-bl-l04">
+                                                    <rect key="frame" x="20" y="20" width="95.5" height="106.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="tUd-bl-l04" secondAttribute="height" multiplier="1:1" priority="750" id="TgB-aa-1bN"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="電影名稱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mpn-f2-d4u">
+                                                    <rect key="frame" x="135.5" y="20" width="131.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上映日期: 2015-08-13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EVV-vp-VNf">
+                                                    <rect key="frame" x="144" y="111.5" width="123" height="15"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="tUd-bl-l04" firstAttribute="leading" secondItem="kdU-WF-iE9" secondAttribute="leading" constant="20" id="BPu-BE-JwI"/>
+                                                <constraint firstItem="tUd-bl-l04" firstAttribute="width" secondItem="kdU-WF-iE9" secondAttribute="width" multiplier="1:3" id="EDE-ic-v4y"/>
+                                                <constraint firstAttribute="trailing" secondItem="Mpn-f2-d4u" secondAttribute="trailing" constant="20" id="G8m-pl-bVR"/>
+                                                <constraint firstItem="tUd-bl-l04" firstAttribute="width" secondItem="kdU-WF-iE9" secondAttribute="width" multiplier="1:3" id="OIy-U4-bUO"/>
+                                                <constraint firstAttribute="bottom" secondItem="tUd-bl-l04" secondAttribute="bottom" constant="20" id="WQq-dd-yDd"/>
+                                                <constraint firstItem="Mpn-f2-d4u" firstAttribute="leading" secondItem="tUd-bl-l04" secondAttribute="trailing" constant="20" id="YiY-FY-kaY"/>
+                                                <constraint firstItem="Mpn-f2-d4u" firstAttribute="top" secondItem="tUd-bl-l04" secondAttribute="top" id="igD-Vt-iN8"/>
+                                                <constraint firstItem="EVV-vp-VNf" firstAttribute="bottom" secondItem="tUd-bl-l04" secondAttribute="bottom" id="n0A-6M-cGA"/>
+                                                <constraint firstAttribute="trailing" secondItem="EVV-vp-VNf" secondAttribute="trailing" constant="20" id="nmZ-2W-nRe"/>
+                                                <constraint firstItem="tUd-bl-l04" firstAttribute="top" secondItem="kdU-WF-iE9" secondAttribute="top" constant="20" id="zBF-31-jFR"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="OIy-U4-bUO"/>
+                                                </mask>
+                                            </variation>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Be9-vS-gc6" kind="show" id="HTl-g4-IfO"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HhF-uE-2uM" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="4PH-Uu-Cqc"/>
+                            <constraint firstAttribute="trailing" secondItem="HhF-uE-2uM" secondAttribute="trailing" id="4eq-qm-jmN"/>
+                            <constraint firstItem="HhF-uE-2uM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="imf-d9-zcn"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HhF-uE-2uM" secondAttribute="bottom" id="xpg-XA-h6d"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="電影" id="4PX-TL-5z9"/>
+                    <navigationItem key="navigationItem" title="本週新片" id="55I-4U-67E"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="824" y="-2"/>
+            <point key="canvasLocation" x="1290" y="-2"/>
+        </scene>
+        <!--電影名稱-->
+        <scene sceneID="Alr-mE-hdI">
+            <objects>
+                <viewController id="Be9-vS-gc6" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="kOn-er-FFq"/>
+                        <viewControllerLayoutGuide type="bottom" id="JRa-n9-DZg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="upS-Hw-oLb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tCV-vH-2NN">
+                                <rect key="frame" x="60" y="84" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="0wG-qg-xJA"/>
+                                    <constraint firstAttribute="height" constant="200" id="L58-X5-xB5"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="簡介" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNo-oi-aEL">
+                                <rect key="frame" x="10" y="304" width="300" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="qQq-My-mhz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tCV-vH-2NN" firstAttribute="centerX" secondItem="upS-Hw-oLb" secondAttribute="centerX" id="HvI-Rk-Z8l"/>
+                            <constraint firstItem="aNo-oi-aEL" firstAttribute="centerX" secondItem="upS-Hw-oLb" secondAttribute="centerX" id="SeM-v4-K20"/>
+                            <constraint firstItem="aNo-oi-aEL" firstAttribute="top" secondItem="tCV-vH-2NN" secondAttribute="bottom" constant="20" id="Xhj-0I-Y3g"/>
+                            <constraint firstItem="tCV-vH-2NN" firstAttribute="top" secondItem="kOn-er-FFq" secondAttribute="bottom" constant="20" id="aCX-v8-eab"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="電影名稱" id="E47-tX-NDn"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cAu-AR-DCH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1728" y="-2"/>
         </scene>
         <!--簽名-->
         <scene sceneID="a9P-GM-ax7">
@@ -56,13 +170,32 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="7Bb-8d-KTX"/>
+                        <segue destination="ThL-UN-0ln" kind="relationship" relationship="viewControllers" id="7Bb-8d-KTX"/>
                         <segue destination="kDJ-7L-pRN" kind="relationship" relationship="viewControllers" id="SQi-y2-DnI"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eqj-yV-yPv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="385" y="312"/>
+        </scene>
+        <!--電影-->
+        <scene sceneID="IeZ-ig-rwi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ThL-UN-0ln" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="電影" id="4PX-TL-5z9"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NS8-3p-2ow">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="yxy-xu-tWw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N96-EN-iQi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="824" y="-2"/>
         </scene>
     </scenes>
 </document>
