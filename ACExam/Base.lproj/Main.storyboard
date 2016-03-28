@@ -19,65 +19,80 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="147" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HhF-uE-2uM">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="179" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HhF-uE-2uM">
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="separatorColor" red="0.98431372549999996" green="0.30588235289999999" blue="0.035294117649999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="gUl-X4-uDm">
-                                    <rect key="frame" x="0.0" y="175" width="320" height="44"/>
+                                    <rect key="frame" x="0.0" y="207" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="147" id="Gi7-5m-K5b" customClass="MovieTableViewCell" customModule="ACMovie" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="147"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="179" id="Gi7-5m-K5b" customClass="MovieTableViewCell" customModule="ACMovie" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="179"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gi7-5m-K5b" id="kdU-WF-iE9">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="146.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="179"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tUd-bl-l04">
-                                                    <rect key="frame" x="20" y="20" width="95.5" height="106.5"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fk8-w5-gWn">
+                                                    <rect key="frame" x="10" y="10.5" width="267" height="134"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="電影名稱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7kC-2a-bae">
+                                                            <rect key="frame" x="144.5" y="0.0" width="122.5" height="21"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e2w-ux-ZQx">
+                                                            <rect key="frame" x="0.0" y="0.0" width="134.5" height="134"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="e2w-ux-ZQx" secondAttribute="height" multiplier="1:1" id="tam-4F-FJB"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上映日期: 2015-08-13" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzx-lg-Obh">
+                                                            <rect key="frame" x="144.5" y="119.5" width="122.5" height="14.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="tUd-bl-l04" secondAttribute="height" multiplier="1:1" priority="750" id="TgB-aa-1bN"/>
+                                                        <constraint firstAttribute="bottom" secondItem="e2w-ux-ZQx" secondAttribute="bottom" id="9vO-sJ-qfi"/>
+                                                        <constraint firstAttribute="trailing" secondItem="7kC-2a-bae" secondAttribute="trailing" id="AxD-S9-M8s"/>
+                                                        <constraint firstItem="e2w-ux-ZQx" firstAttribute="leading" secondItem="fk8-w5-gWn" secondAttribute="leading" id="CJq-SM-qkk"/>
+                                                        <constraint firstItem="e2w-ux-ZQx" firstAttribute="top" secondItem="fk8-w5-gWn" secondAttribute="top" id="ESE-Oo-Qbz"/>
+                                                        <constraint firstItem="7kC-2a-bae" firstAttribute="top" secondItem="fk8-w5-gWn" secondAttribute="top" id="a6o-pk-lfy"/>
+                                                        <constraint firstAttribute="bottom" secondItem="lzx-lg-Obh" secondAttribute="bottom" id="doi-EJ-o4y"/>
+                                                        <constraint firstAttribute="trailing" secondItem="lzx-lg-Obh" secondAttribute="trailing" id="drX-jr-3Hf"/>
+                                                        <constraint firstItem="lzx-lg-Obh" firstAttribute="leading" secondItem="e2w-ux-ZQx" secondAttribute="trailing" constant="10" id="kRK-vF-WpV"/>
+                                                        <constraint firstItem="e2w-ux-ZQx" firstAttribute="width" secondItem="fk8-w5-gWn" secondAttribute="width" multiplier="2:5" id="yLo-A1-ZR7"/>
+                                                        <constraint firstItem="7kC-2a-bae" firstAttribute="leading" secondItem="e2w-ux-ZQx" secondAttribute="trailing" constant="10" id="ylT-uC-B7N"/>
                                                     </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="電影名稱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mpn-f2-d4u">
-                                                    <rect key="frame" x="135.5" y="20" width="131.5" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="上映日期: 2015-08-13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EVV-vp-VNf">
-                                                    <rect key="frame" x="144" y="111.5" width="123" height="15"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SzO-FC-coq">
+                                                    <rect key="frame" x="0.0" y="154.5" width="287" height="5"/>
+                                                    <color key="backgroundColor" red="0.98431372549999996" green="0.30588235289999999" blue="0.035294117649999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="5" id="dCf-eP-iGO"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="tUd-bl-l04" firstAttribute="leading" secondItem="kdU-WF-iE9" secondAttribute="leading" constant="20" id="BPu-BE-JwI"/>
-                                                <constraint firstItem="tUd-bl-l04" firstAttribute="width" secondItem="kdU-WF-iE9" secondAttribute="width" multiplier="1:3" id="EDE-ic-v4y"/>
-                                                <constraint firstAttribute="trailing" secondItem="Mpn-f2-d4u" secondAttribute="trailing" constant="20" id="G8m-pl-bVR"/>
-                                                <constraint firstItem="tUd-bl-l04" firstAttribute="width" secondItem="kdU-WF-iE9" secondAttribute="width" multiplier="1:3" id="OIy-U4-bUO"/>
-                                                <constraint firstAttribute="bottom" secondItem="tUd-bl-l04" secondAttribute="bottom" constant="20" id="WQq-dd-yDd"/>
-                                                <constraint firstItem="Mpn-f2-d4u" firstAttribute="leading" secondItem="tUd-bl-l04" secondAttribute="trailing" constant="20" id="YiY-FY-kaY"/>
-                                                <constraint firstItem="Mpn-f2-d4u" firstAttribute="top" secondItem="tUd-bl-l04" secondAttribute="top" id="igD-Vt-iN8"/>
-                                                <constraint firstItem="EVV-vp-VNf" firstAttribute="bottom" secondItem="tUd-bl-l04" secondAttribute="bottom" id="n0A-6M-cGA"/>
-                                                <constraint firstAttribute="trailing" secondItem="EVV-vp-VNf" secondAttribute="trailing" constant="20" id="nmZ-2W-nRe"/>
-                                                <constraint firstItem="tUd-bl-l04" firstAttribute="top" secondItem="kdU-WF-iE9" secondAttribute="top" constant="20" id="zBF-31-jFR"/>
+                                                <constraint firstAttribute="trailing" secondItem="SzO-FC-coq" secondAttribute="trailing" id="1lS-tr-PqH"/>
+                                                <constraint firstAttribute="trailing" secondItem="fk8-w5-gWn" secondAttribute="trailing" constant="10" id="7Ds-lh-ic3"/>
+                                                <constraint firstItem="SzO-FC-coq" firstAttribute="top" secondItem="fk8-w5-gWn" secondAttribute="bottom" constant="10" id="Bgu-f9-bzo"/>
+                                                <constraint firstItem="fk8-w5-gWn" firstAttribute="top" secondItem="kdU-WF-iE9" secondAttribute="top" constant="10" id="I9n-en-ndS"/>
+                                                <constraint firstItem="fk8-w5-gWn" firstAttribute="leading" secondItem="kdU-WF-iE9" secondAttribute="leading" constant="10" id="S6G-tE-6hp"/>
+                                                <constraint firstItem="SzO-FC-coq" firstAttribute="leading" secondItem="kdU-WF-iE9" secondAttribute="leading" id="UfU-JB-6gq"/>
+                                                <constraint firstAttribute="bottom" secondItem="SzO-FC-coq" secondAttribute="bottom" id="eFn-HG-ank"/>
                                             </constraints>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="OIy-U4-bUO"/>
-                                                </mask>
-                                            </variation>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="imageView" destination="tUd-bl-l04" id="nmh-n8-C0o"/>
-                                            <outlet property="movieDate" destination="EVV-vp-VNf" id="ATt-Hb-Xdl"/>
-                                            <outlet property="movieImage" destination="tUd-bl-l04" id="HKa-Qz-qpn"/>
-                                            <outlet property="movieName" destination="Mpn-f2-d4u" id="HhC-ny-AUf"/>
+                                            <outlet property="movieDate" destination="lzx-lg-Obh" id="eP5-OM-lqJ"/>
+                                            <outlet property="movieImage" destination="e2w-ux-ZQx" id="tnD-LY-xtH"/>
+                                            <outlet property="movieName" destination="7kC-2a-bae" id="DH5-sN-6UW"/>
                                             <segue destination="Be9-vS-gc6" kind="show" identifier="ShowMovieDetail" id="HTl-g4-IfO"/>
                                         </connections>
                                     </tableViewCell>
