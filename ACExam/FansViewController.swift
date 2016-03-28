@@ -27,6 +27,8 @@ class FansViewController: UIViewController {
         inputTextField.text = ""
         inputTextView.text = ""
         errorMessageLabel.text = ""
+        
+        inputTextField.becomeFirstResponder()
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,6 +36,10 @@ class FansViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func closeKeyBoard(sender: AnyObject) {
+        view.endEditing(true)
+    }
+    
     @IBAction func newSign(sender: AnyObject) {
         
         guard inputTextField.text != "" else {

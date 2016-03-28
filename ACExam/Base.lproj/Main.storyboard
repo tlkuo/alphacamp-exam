@@ -177,7 +177,7 @@
                                     <action selector="newSign:" destination="kDJ-7L-pRN" eventType="touchUpInside" id="elx-Mo-Tqe"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="f06-Wk-9DD">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="f06-Wk-9DD">
                                 <rect key="frame" x="20" y="70" width="280" height="140"/>
                                 <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -195,6 +195,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="uGy-R1-uvD" firstAttribute="leading" secondItem="ROl-jf-ED1" secondAttribute="leading" constant="30" id="6kZ-8P-RHU"/>
                             <constraint firstItem="f06-Wk-9DD" firstAttribute="leading" secondItem="ROl-jf-ED1" secondAttribute="leading" constant="20" id="CdV-Yd-545"/>
@@ -213,6 +214,9 @@
                                 <exclude reference="nIM-qI-fxs"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Nh7-GS-Fhn" appends="YES" id="99B-7V-BD8"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="簽名" id="raX-HF-IlG"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -223,6 +227,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NR4-5C-2bF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Nh7-GS-Fhn">
+                    <connections>
+                        <action selector="closeKeyBoard:" destination="kDJ-7L-pRN" id="VR2-kM-nUn"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="824" y="672"/>
         </scene>
