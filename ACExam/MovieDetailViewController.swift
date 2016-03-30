@@ -13,7 +13,7 @@ class MovieDetailViewController: UIViewController {
     @IBOutlet weak var movieDescription: UILabel!
     @IBOutlet weak var movieBottom: UIView!
     @IBOutlet weak var movieScrollView: UIScrollView!
-    
+
     var movie: Movie?
 
     override func viewDidLoad() {
@@ -24,7 +24,6 @@ class MovieDetailViewController: UIViewController {
             navigationItem.title = mov.name
             movieImage.image = UIImage(named: mov.image)
             movieDescription.text = mov.description
-            movieDescription.sizeToFit()
         }
     }
 
