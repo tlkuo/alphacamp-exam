@@ -136,7 +136,7 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0dI-B3-buT">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="270.5"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tCV-vH-2NN">
                                                 <rect key="frame" x="60" y="20" width="200" height="200"/>
@@ -169,6 +169,7 @@
                                             <constraint firstItem="aNo-oi-aEL" firstAttribute="top" secondItem="tCV-vH-2NN" secondAttribute="bottom" constant="20" id="R7g-9a-lRm"/>
                                             <constraint firstAttribute="trailing" secondItem="SXE-al-jnC" secondAttribute="trailing" id="hXB-kW-gvs"/>
                                             <constraint firstItem="SXE-al-jnC" firstAttribute="top" secondItem="aNo-oi-aEL" secondAttribute="bottom" constant="10" id="ja3-bf-ceF"/>
+                                            <constraint firstAttribute="bottom" secondItem="SXE-al-jnC" secondAttribute="bottom" id="qgh-7T-Ef7"/>
                                             <constraint firstItem="tCV-vH-2NN" firstAttribute="centerX" secondItem="0dI-B3-buT" secondAttribute="centerX" id="ryf-yh-Ox9"/>
                                             <constraint firstItem="aNo-oi-aEL" firstAttribute="centerX" secondItem="0dI-B3-buT" secondAttribute="centerX" id="zW7-gR-Mkd"/>
                                         </constraints>
@@ -178,7 +179,6 @@
                                     <constraint firstAttribute="bottom" secondItem="0dI-B3-buT" secondAttribute="bottom" id="8Lz-wG-Til"/>
                                     <constraint firstItem="0dI-B3-buT" firstAttribute="centerX" secondItem="dqR-hO-3d4" secondAttribute="centerX" id="LUy-f7-4Ge"/>
                                     <constraint firstItem="0dI-B3-buT" firstAttribute="top" secondItem="dqR-hO-3d4" secondAttribute="top" id="Leu-U6-NC2"/>
-                                    <constraint firstItem="0dI-B3-buT" firstAttribute="centerY" secondItem="dqR-hO-3d4" secondAttribute="centerY" id="O4i-Jw-H52"/>
                                     <constraint firstAttribute="trailing" secondItem="0dI-B3-buT" secondAttribute="trailing" id="def-Qw-0rI"/>
                                     <constraint firstItem="0dI-B3-buT" firstAttribute="leading" secondItem="dqR-hO-3d4" secondAttribute="leading" id="x6d-g1-bqb"/>
                                 </constraints>
@@ -195,7 +195,6 @@
                     <navigationItem key="navigationItem" title="電影名稱" id="E47-tX-NDn"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="movieBottom" destination="SXE-al-jnC" id="1BU-cZ-SrO"/>
                         <outlet property="movieDescription" destination="aNo-oi-aEL" id="Y5Y-Mu-I6X"/>
                         <outlet property="movieImage" destination="tCV-vH-2NN" id="V7z-9H-2Eo"/>
                         <outlet property="movieScrollView" destination="dqR-hO-3d4" id="XJK-cn-2PJ"/>

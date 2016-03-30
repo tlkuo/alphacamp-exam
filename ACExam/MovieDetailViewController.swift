@@ -11,7 +11,6 @@ import UIKit
 class MovieDetailViewController: UIViewController {
     @IBOutlet weak var movieImage: UIImageView!
     @IBOutlet weak var movieDescription: UILabel!
-    @IBOutlet weak var movieBottom: UIView!
     @IBOutlet weak var movieScrollView: UIScrollView!
 
     var movie: Movie?
@@ -25,13 +24,6 @@ class MovieDetailViewController: UIViewController {
             movieImage.image = UIImage(named: mov.image)
             movieDescription.text = mov.description
         }
-    }
-
-    override func viewWillLayoutSubviews() {
-        let width = movieScrollView.frame.width
-        let height = movieBottom.convertPoint(CGPointZero, toView: movieScrollView).y
-
-        movieScrollView.contentSize = CGSizeMake(width, height)
     }
 
     override func didReceiveMemoryWarning() {
