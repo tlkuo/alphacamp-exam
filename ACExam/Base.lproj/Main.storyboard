@@ -154,11 +154,21 @@
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SXE-al-jnC">
+                                                <rect key="frame" x="0.0" y="270.5" width="320" height="0.0"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" id="BWJ-1U-Qj7"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
+                                            <constraint firstItem="SXE-al-jnC" firstAttribute="leading" secondItem="0dI-B3-buT" secondAttribute="leading" id="6hf-OK-oPC"/>
                                             <constraint firstItem="tCV-vH-2NN" firstAttribute="top" secondItem="0dI-B3-buT" secondAttribute="top" constant="20" id="BlI-6q-qcr"/>
                                             <constraint firstItem="aNo-oi-aEL" firstAttribute="top" secondItem="tCV-vH-2NN" secondAttribute="bottom" constant="20" id="R7g-9a-lRm"/>
+                                            <constraint firstAttribute="trailing" secondItem="SXE-al-jnC" secondAttribute="trailing" id="hXB-kW-gvs"/>
+                                            <constraint firstItem="SXE-al-jnC" firstAttribute="top" secondItem="aNo-oi-aEL" secondAttribute="bottom" constant="10" id="ja3-bf-ceF"/>
                                             <constraint firstItem="tCV-vH-2NN" firstAttribute="centerX" secondItem="0dI-B3-buT" secondAttribute="centerX" id="ryf-yh-Ox9"/>
                                             <constraint firstItem="aNo-oi-aEL" firstAttribute="centerX" secondItem="0dI-B3-buT" secondAttribute="centerX" id="zW7-gR-Mkd"/>
                                         </constraints>
@@ -185,6 +195,7 @@
                     <navigationItem key="navigationItem" title="電影名稱" id="E47-tX-NDn"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="movieBottom" destination="SXE-al-jnC" id="1BU-cZ-SrO"/>
                         <outlet property="movieDescription" destination="aNo-oi-aEL" id="Y5Y-Mu-I6X"/>
                         <outlet property="movieImage" destination="tCV-vH-2NN" id="V7z-9H-2Eo"/>
                         <outlet property="movieScrollView" destination="dqR-hO-3d4" id="XJK-cn-2PJ"/>
